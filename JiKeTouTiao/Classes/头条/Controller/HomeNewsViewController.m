@@ -16,6 +16,8 @@
 #import "HomeNewsWebViewController.h"
 
 #define CellIdentifier @"cellIdentifier"
+#define Footer @"FooterCellIdentifier"
+
 
 @interface HomeNewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -31,7 +33,7 @@
 -(UITableView *)tableView{
     
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-64) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-64) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.rowHeight = ScreenHeight/1.4;
@@ -39,7 +41,7 @@
         _tableView.showsHorizontalScrollIndicator = NO;
         
         [_tableView registerNib:[UINib nibWithNibName:@"HomeNewsTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier];
-        
+//        [_tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:Footer];
         
     }
     return _tableView;
@@ -74,7 +76,25 @@
         
     }];
     
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"refresh"] style:UIBarButtonItemStylePlain target:self action:@selector(rightBtnAction:)];
+    
+    
+#pragma mark 下拉刷新
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadTopMoreData)];
+    [self.tableView.mj_header beginRefreshing];
+    
 }
+
+
+
+#pragma mark 导航栏刷新按钮
+-(void)rightBtnAction:(UINavigationItem *)sender{
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadTopMoreData)];
+    [self.tableView.mj_header beginRefreshing];
+}
+
 
 #pragma mark --- 网络请求
 -(void)netWorkRequest{
@@ -96,13 +116,31 @@
     NSString *urlString = [NSString stringWithFormat:@"http://api.geeknews.app887.com/api/Articles.action?opc=10&npc=%ld&type=%@",self.currentPage,@"头条"];
     [AFNetWorkRequest getRequestWithUrl:urlString result:^(id result) {
         
-        self.dataSource = [HomeNewsModel processingDict:result];
+#pragma mark 上拉加载更多核心代码
+        [self.dataSource addObjectsFromArray:[HomeNewsModel processingDict:result]];
         [tableView.mj_footer endRefreshing];
         self.currentPage ++;
         [self.tableView reloadData];
         
     }];
     
+}
+
+-(void)loadTopMoreData{
+    self.currentPage = 1;
+     NSString *urlString = [NSString stringWithFormat:@"http://api.geeknews.app887.com/api/Articles.action?opc=10&npc=%ld&type=%@",self.currentPage,@"头条"];
+    [AFNetWorkRequest getRequestWithUrl:urlString result:^(id result) {
+      
+        [self.dataSource addObjectsFromArray:[HomeNewsModel processingDict:result]];
+        [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
+    }];
+    
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

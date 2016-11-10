@@ -20,7 +20,12 @@
     
     [[UINavigationBar appearance]setBarTintColor:RLColor(67, 74, 77)];
      [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17],NSForegroundColorAttributeName:[UIColor whiteColor]}];
+  
     
+    
+}
+
+-(void)rightBtnAction:(UINavigationItem *)sender{
     
     
 }

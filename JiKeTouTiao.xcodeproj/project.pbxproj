@@ -29,6 +29,10 @@
 		D43762E81DD31858004A62E8 /* HomeNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D43762E61DD31858004A62E8 /* HomeNewsTableViewCell.xib */; };
 		D43762EB1DD31C10004A62E8 /* HomeNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43762EA1DD31C10004A62E8 /* HomeNewsViewController.m */; };
 		D43762EE1DD32C4F004A62E8 /* HomeNewsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43762ED1DD32C4F004A62E8 /* HomeNewsWebViewController.m */; };
+		D43763381DD47418004A62E8 /* CrowdFundingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D43763361DD47418004A62E8 /* CrowdFundingTableViewCell.m */; };
+		D43763391DD47418004A62E8 /* CrowdFundingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D43763371DD47418004A62E8 /* CrowdFundingTableViewCell.xib */; };
+		D437633C1DD47463004A62E8 /* CrowdfundingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D437633B1DD47463004A62E8 /* CrowdfundingModel.m */; };
+		D437633F1DD4847F004A62E8 /* CrowdfundingNewsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D437633E1DD4847F004A62E8 /* CrowdfundingNewsWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +97,13 @@
 		D43762EA1DD31C10004A62E8 /* HomeNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNewsViewController.m; sourceTree = "<group>"; };
 		D43762EC1DD32C4F004A62E8 /* HomeNewsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNewsWebViewController.h; sourceTree = "<group>"; };
 		D43762ED1DD32C4F004A62E8 /* HomeNewsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNewsWebViewController.m; sourceTree = "<group>"; };
+		D43763351DD47418004A62E8 /* CrowdFundingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdFundingTableViewCell.h; sourceTree = "<group>"; };
+		D43763361DD47418004A62E8 /* CrowdFundingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdFundingTableViewCell.m; sourceTree = "<group>"; };
+		D43763371DD47418004A62E8 /* CrowdFundingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CrowdFundingTableViewCell.xib; sourceTree = "<group>"; };
+		D437633A1DD47463004A62E8 /* CrowdfundingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdfundingModel.h; sourceTree = "<group>"; };
+		D437633B1DD47463004A62E8 /* CrowdfundingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdfundingModel.m; sourceTree = "<group>"; };
+		D437633D1DD4847F004A62E8 /* CrowdfundingNewsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdfundingNewsWebViewController.h; sourceTree = "<group>"; };
+		D437633E1DD4847F004A62E8 /* CrowdfundingNewsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdfundingNewsWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +238,8 @@
 			children = (
 				D43762CB1DD30284004A62E8 /* CrowdfundingViewController.h */,
 				D43762CC1DD30284004A62E8 /* CrowdfundingViewController.m */,
+				D437633D1DD4847F004A62E8 /* CrowdfundingNewsWebViewController.h */,
+				D437633E1DD4847F004A62E8 /* CrowdfundingNewsWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -234,6 +247,8 @@
 		D43762A21DD2FFBA004A62E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D437633A1DD47463004A62E8 /* CrowdfundingModel.h */,
+				D437633B1DD47463004A62E8 /* CrowdfundingModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,6 +256,9 @@
 		D43762A31DD2FFBA004A62E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D43763351DD47418004A62E8 /* CrowdFundingTableViewCell.h */,
+				D43763361DD47418004A62E8 /* CrowdFundingTableViewCell.m */,
+				D43763371DD47418004A62E8 /* CrowdFundingTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -552,6 +570,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43763391DD47418004A62E8 /* CrowdFundingTableViewCell.xib in Resources */,
 				D437627C1DD2FCA1004A62E8 /* LaunchScreen.storyboard in Resources */,
 				D43762791DD2FCA1004A62E8 /* Assets.xcassets in Resources */,
 				D43762741DD2FCA1004A62E8 /* Main.storyboard in Resources */,
@@ -630,16 +649,19 @@
 			files = (
 				D43762D91DD30736004A62E8 /* TabBarViewController.m in Sources */,
 				D43762E31DD31209004A62E8 /* UIView+UIViewExtension.m in Sources */,
+				D43763381DD47418004A62E8 /* CrowdFundingTableViewCell.m in Sources */,
 				D43762CD1DD30284004A62E8 /* CrowdfundingViewController.m in Sources */,
 				D43762771DD2FCA1004A62E8 /* JiKeTouTiao.xcdatamodeld in Sources */,
 				D43762EE1DD32C4F004A62E8 /* HomeNewsWebViewController.m in Sources */,
 				D43762E71DD31858004A62E8 /* HomeNewsTableViewCell.m in Sources */,
 				D43762C71DD3020B004A62E8 /* ScienceViewController.m in Sources */,
 				D43762DF1DD30CCF004A62E8 /* HomeNewsModel.m in Sources */,
+				D437633C1DD47463004A62E8 /* CrowdfundingModel.m in Sources */,
 				D43762DC1DD3077F004A62E8 /* JiKeNavigationViewController.m in Sources */,
 				D43762BC1DD2FFBA004A62E8 /* main.m in Sources */,
 				D43762D01DD302E5004A62E8 /* SettingViewController.m in Sources */,
 				D43762CA1DD30235004A62E8 /* VideoViewController.m in Sources */,
+				D437633F1DD4847F004A62E8 /* CrowdfundingNewsWebViewController.m in Sources */,
 				D43762EB1DD31C10004A62E8 /* HomeNewsViewController.m in Sources */,
 				D43762BB1DD2FFBA004A62E8 /* AppDelegate.m in Sources */,
 				D43762C11DD30102004A62E8 /* AFNetWorkRequest.m in Sources */,
@@ -793,7 +815,9 @@
 			baseConfigurationReference = A88B6D53D553F89F4894640F /* Pods-JiKeTouTiao.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = JiKeTouTiao/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.JiKeTouTiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -805,7 +829,9 @@
 			baseConfigurationReference = 45AC6491FD69A8220214A745 /* Pods-JiKeTouTiao.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = JiKeTouTiao/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.JiKeTouTiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
