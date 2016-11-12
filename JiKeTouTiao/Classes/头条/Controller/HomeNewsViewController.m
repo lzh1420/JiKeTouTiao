@@ -33,15 +33,17 @@
 -(UITableView *)tableView{
     
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-64) style:UITableViewStyleGrouped];
+        self.automaticallyAdjustsScrollViewInsets = NO;
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, ScreenWidth, ScreenHeight-64) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.rowHeight = ScreenHeight/1.4;
+        _tableView.estimatedRowHeight = ScreenHeight;
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.showsHorizontalScrollIndicator = NO;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         [_tableView registerNib:[UINib nibWithNibName:@"HomeNewsTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier];
-//        [_tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:Footer];
+
         
     }
     return _tableView;
@@ -138,11 +140,6 @@
     
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
-    return 1;
-}
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     return self.dataSource.count;
@@ -173,9 +170,7 @@
     newsWebView.title = self.dataSource[indexPath.row].title;
     [self.navigationController pushViewController:newsWebView animated:YES];
     
-    
 }
-
 
 
 @end

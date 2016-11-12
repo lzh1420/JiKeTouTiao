@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,17 +22,6 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="drm-io-ZBU">
                         <rect key="frame" x="0.0" y="0.0" width="344" height="199"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="京东众筹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk2-n6-aYn" userLabel="众筹">
-                        <rect key="frame" x="10" y="143" width="55" height="20"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="55" id="Xpa-Hn-XGb"/>
-                            <constraint firstAttribute="height" constant="20" id="fwJ-l1-AW4"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trw-IR-uve">
                         <rect key="frame" x="10" y="168" width="334" height="21"/>
                         <constraints>
@@ -41,16 +31,26 @@
                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="京东众筹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk2-n6-aYn" userLabel="众筹">
+                        <rect key="frame" x="10" y="140" width="53.5" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="fwJ-l1-AW4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Trw-IR-uve" firstAttribute="top" secondItem="hk2-n6-aYn" secondAttribute="bottom" constant="5" id="2Pi-s6-E8q"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hk2-n6-aYn" secondAttribute="bottom" constant="31" id="08R-Hf-bNr"/>
                     <constraint firstAttribute="bottom" secondItem="Trw-IR-uve" secondAttribute="bottom" constant="10" id="6hL-O0-YNr"/>
                     <constraint firstAttribute="bottom" secondItem="drm-io-ZBU" secondAttribute="bottom" id="CEq-3d-sQG"/>
                     <constraint firstAttribute="trailing" secondItem="Trw-IR-uve" secondAttribute="trailing" id="D98-Yk-Al9"/>
                     <constraint firstAttribute="trailing" secondItem="drm-io-ZBU" secondAttribute="trailing" id="Eqt-EA-Wue"/>
-                    <constraint firstItem="Trw-IR-uve" firstAttribute="leading" secondItem="hk2-n6-aYn" secondAttribute="leading" id="Sa3-Ay-hUq"/>
                     <constraint firstItem="Trw-IR-uve" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bQg-RJ-SU4"/>
                     <constraint firstItem="drm-io-ZBU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kUB-3l-XQR"/>
+                    <constraint firstItem="hk2-n6-aYn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="oTv-6F-bU2"/>
                     <constraint firstItem="drm-io-ZBU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tGO-ef-4l7"/>
                 </constraints>
             </tableViewCellContentView>
@@ -59,7 +59,7 @@
                 <outlet property="sourceLabel" destination="hk2-n6-aYn" id="crF-hF-GY4"/>
                 <outlet property="titleLabel" destination="Trw-IR-uve" id="eDK-qo-hn6"/>
             </connections>
-            <point key="canvasLocation" x="2" y="-13"/>
+            <point key="canvasLocation" x="-278" y="-21"/>
         </tableViewCell>
     </objects>
 </document>

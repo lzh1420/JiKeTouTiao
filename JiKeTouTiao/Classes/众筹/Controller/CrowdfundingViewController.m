@@ -20,7 +20,7 @@
 @interface CrowdfundingViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView * tableView;
 @property (nonatomic,strong) NSMutableArray<CrowdfundingModel *> * dataSource;
-@property (nonatomic,strong) NSMutableArray * currentPage;
+@property (nonatomic,assign) NSInteger currentPage;
 
 @end
 
@@ -33,7 +33,8 @@
         _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.rowHeight = ScreenHeight/2.7;
+        _tableView.rowHeight = ScreenHeight/3.f;
+//        _tableView.rowHeight = UITableViewAutomaticDimension;
         
         [_tableView registerNib:[UINib nibWithNibName:@"CrowdFundingTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:CellIdentifier];
         
@@ -57,24 +58,33 @@
     
     
 #pragma mark 上拉加载
-    self.tableView .mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-       
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        
+        [self.tableView .mj_footer beginRefreshing];
+        self.currentPage += 1;
+        [self loadMoreData:self.currentPage];
         
     }];
+    
+    
+#pragma mark 下拉刷新
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadTopMoreData)];
+    [self.tableView.mj_header beginRefreshing];
+
 }
 
 -(void)rightBtnAction:(UIBarButtonItem *)sender{
-    
-    
-}
 
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadTopMoreData)];
+    [self.tableView.mj_header beginRefreshing];
+}
 
 -(void)netWorkRequest{
     
-    NSString *CrowdfundString = [NSString stringWithFormat:@"http://api.geeknews.app887.com/api/Articles.action?npc=0&opc=20&type=%@",@"众筹"];
+    NSString *CrowdfundString = [NSString stringWithFormat:@"http://api.geeknews.app887.com/api/Articles.action?npc=%ld&opc=20&type=%@",self.currentPage,@"众筹"];
     [AFNetWorkRequest getRequestWithUrl:CrowdfundString result:^(id result) {
        
-        RLLog(@"**********%@************ ",result);
+//        RLLog(@"**********%@************ ",result);
         self.dataSource = [CrowdfundingModel processingDict:result];
         [self.tableView reloadData];
     }];
@@ -84,16 +94,41 @@
 
 #pragma mark 上拉加载实现方法
 
--(void)loadMoreData:(NSInteger )page forTable:(UITableView *)tableView{
+-(void)loadMoreData:(NSInteger )page{
     
+     NSString *CrowdfundString = [NSString stringWithFormat:@"http://api.geeknews.app887.com/api/Articles.action?npc=%ld&opc=20&type=%@",self.currentPage,@"众筹"];
+    [AFNetWorkRequest getRequestWithUrl:CrowdfundString result:^(id result) {
+                RLLog(@"**********%@************ ",result);
+#pragma mark 上拉加载更多核心代码
+        [self.dataSource addObjectsFromArray:[CrowdfundingModel processingDict:result]];
+        self.currentPage ++;
+        [self.tableView reloadData];
+        [self.tableView.mj_footer endRefreshing];
+        
+    }];
     
 }
+
+#pragma mark 下拉刷新实现方法
+-(void)loadTopMoreData{
+    
+    self.currentPage = 1;
+   NSString *CrowdfundString = [NSString stringWithFormat:@"http://api.geeknews.app887.com/api/Articles.action?npc=%ld&opc=20&type=%@",self.currentPage,@"众筹"];
+    [AFNetWorkRequest getRequestWithUrl:CrowdfundString result:^(id result) {
+        
+        [self.dataSource addObjectsFromArray:[CrowdfundingModel processingDict:result]];
+        [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
+    }];
+}
+
+
 
 
 #pragma mark UITableViewDataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
-    return 20;
+    return self.dataSource.count;
 }
 
 
@@ -121,9 +156,6 @@
     newsWebView.url = self.dataSource[indexPath.row].url;
     newsWebView.title = self.dataSource[indexPath.row].title;
     [self.navigationController pushViewController:newsWebView animated:YES];
-    
-    
-    
     
 }
 
