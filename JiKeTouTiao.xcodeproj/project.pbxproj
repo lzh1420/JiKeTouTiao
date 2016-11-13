@@ -33,6 +33,9 @@
 		D43763391DD47418004A62E8 /* CrowdFundingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D43763371DD47418004A62E8 /* CrowdFundingTableViewCell.xib */; };
 		D437633C1DD47463004A62E8 /* CrowdfundingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D437633B1DD47463004A62E8 /* CrowdfundingModel.m */; };
 		D437633F1DD4847F004A62E8 /* CrowdfundingNewsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D437633E1DD4847F004A62E8 /* CrowdfundingNewsWebViewController.m */; };
+		D437634F1DD71B9F004A62E8 /* JiKeVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D437634E1DD71B9F004A62E8 /* JiKeVideoModel.m */; };
+		D43763531DD71D13004A62E8 /* JiKeVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D43763511DD71D13004A62E8 /* JiKeVideoTableViewCell.m */; };
+		D43763541DD71D13004A62E8 /* JiKeVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D43763521DD71D13004A62E8 /* JiKeVideoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,11 @@
 		D437633B1DD47463004A62E8 /* CrowdfundingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdfundingModel.m; sourceTree = "<group>"; };
 		D437633D1DD4847F004A62E8 /* CrowdfundingNewsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrowdfundingNewsWebViewController.h; sourceTree = "<group>"; };
 		D437633E1DD4847F004A62E8 /* CrowdfundingNewsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrowdfundingNewsWebViewController.m; sourceTree = "<group>"; };
+		D437634D1DD71B9F004A62E8 /* JiKeVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiKeVideoModel.h; sourceTree = "<group>"; };
+		D437634E1DD71B9F004A62E8 /* JiKeVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiKeVideoModel.m; sourceTree = "<group>"; };
+		D43763501DD71D13004A62E8 /* JiKeVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiKeVideoTableViewCell.h; sourceTree = "<group>"; };
+		D43763511DD71D13004A62E8 /* JiKeVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiKeVideoTableViewCell.m; sourceTree = "<group>"; };
+		D43763521DD71D13004A62E8 /* JiKeVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiKeVideoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -399,6 +407,8 @@
 		D43762B51DD2FFBA004A62E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D437634D1DD71B9F004A62E8 /* JiKeVideoModel.h */,
+				D437634E1DD71B9F004A62E8 /* JiKeVideoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -406,6 +416,9 @@
 		D43762B61DD2FFBA004A62E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D43763501DD71D13004A62E8 /* JiKeVideoTableViewCell.h */,
+				D43763511DD71D13004A62E8 /* JiKeVideoTableViewCell.m */,
+				D43763521DD71D13004A62E8 /* JiKeVideoTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -574,6 +587,7 @@
 				D437627C1DD2FCA1004A62E8 /* LaunchScreen.storyboard in Resources */,
 				D43762791DD2FCA1004A62E8 /* Assets.xcassets in Resources */,
 				D43762741DD2FCA1004A62E8 /* Main.storyboard in Resources */,
+				D43763541DD71D13004A62E8 /* JiKeVideoTableViewCell.xib in Resources */,
 				D43762E81DD31858004A62E8 /* HomeNewsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,6 +661,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43763531DD71D13004A62E8 /* JiKeVideoTableViewCell.m in Sources */,
 				D43762D91DD30736004A62E8 /* TabBarViewController.m in Sources */,
 				D43762E31DD31209004A62E8 /* UIView+UIViewExtension.m in Sources */,
 				D43763381DD47418004A62E8 /* CrowdFundingTableViewCell.m in Sources */,
@@ -657,6 +672,7 @@
 				D43762C71DD3020B004A62E8 /* ScienceViewController.m in Sources */,
 				D43762DF1DD30CCF004A62E8 /* HomeNewsModel.m in Sources */,
 				D437633C1DD47463004A62E8 /* CrowdfundingModel.m in Sources */,
+				D437634F1DD71B9F004A62E8 /* JiKeVideoModel.m in Sources */,
 				D43762DC1DD3077F004A62E8 /* JiKeNavigationViewController.m in Sources */,
 				D43762BC1DD2FFBA004A62E8 /* main.m in Sources */,
 				D43762D01DD302E5004A62E8 /* SettingViewController.m in Sources */,
