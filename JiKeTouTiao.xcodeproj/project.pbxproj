@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		12D83D9602B7C4C5C29D61E6 /* libPods-JiKeTouTiao.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B27F17CD2B8E397B6EDBD561 /* libPods-JiKeTouTiao.a */; };
+		D41E502B1DD9C1D900DD0B60 /* ScienceImageViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D41E50291DD9C1D900DD0B60 /* ScienceImageViewTableViewCell.m */; };
+		D41E502C1DD9C1D900DD0B60 /* ScienceImageViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41E502A1DD9C1D900DD0B60 /* ScienceImageViewTableViewCell.xib */; };
+		D41E50BC1DDA0EFC00DD0B60 /* ScienceWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41E50BA1DDA0EFC00DD0B60 /* ScienceWebViewController.m */; };
+		D41E50BD1DDA0EFC00DD0B60 /* ScienceWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41E50BB1DDA0EFC00DD0B60 /* ScienceWebViewController.xib */; };
+		D41E50C01DDA13F700DD0B60 /* VideoWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41E50BF1DDA13F700DD0B60 /* VideoWebViewController.m */; };
 		D43762741DD2FCA1004A62E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43762721DD2FCA1004A62E8 /* Main.storyboard */; };
 		D43762771DD2FCA1004A62E8 /* JiKeTouTiao.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D43762751DD2FCA1004A62E8 /* JiKeTouTiao.xcdatamodeld */; };
 		D43762791DD2FCA1004A62E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43762781DD2FCA1004A62E8 /* Assets.xcassets */; };
@@ -36,6 +41,9 @@
 		D437634F1DD71B9F004A62E8 /* JiKeVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D437634E1DD71B9F004A62E8 /* JiKeVideoModel.m */; };
 		D43763531DD71D13004A62E8 /* JiKeVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D43763511DD71D13004A62E8 /* JiKeVideoTableViewCell.m */; };
 		D43763541DD71D13004A62E8 /* JiKeVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D43763521DD71D13004A62E8 /* JiKeVideoTableViewCell.xib */; };
+		D437635C1DD9A188004A62E8 /* ScienceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D437635B1DD9A188004A62E8 /* ScienceModel.m */; };
+		D43763601DD9A19C004A62E8 /* ScienceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D437635E1DD9A19C004A62E8 /* ScienceTableViewCell.m */; };
+		D43763611DD9A19C004A62E8 /* ScienceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D437635F1DD9A19C004A62E8 /* ScienceTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +67,14 @@
 		45AC6491FD69A8220214A745 /* Pods-JiKeTouTiao.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiKeTouTiao.release.xcconfig"; path = "Pods/Target Support Files/Pods-JiKeTouTiao/Pods-JiKeTouTiao.release.xcconfig"; sourceTree = "<group>"; };
 		A88B6D53D553F89F4894640F /* Pods-JiKeTouTiao.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiKeTouTiao.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JiKeTouTiao/Pods-JiKeTouTiao.debug.xcconfig"; sourceTree = "<group>"; };
 		B27F17CD2B8E397B6EDBD561 /* libPods-JiKeTouTiao.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiKeTouTiao.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41E50281DD9C1D900DD0B60 /* ScienceImageViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScienceImageViewTableViewCell.h; sourceTree = "<group>"; };
+		D41E50291DD9C1D900DD0B60 /* ScienceImageViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScienceImageViewTableViewCell.m; sourceTree = "<group>"; };
+		D41E502A1DD9C1D900DD0B60 /* ScienceImageViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScienceImageViewTableViewCell.xib; sourceTree = "<group>"; };
+		D41E50B91DDA0EFC00DD0B60 /* ScienceWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScienceWebViewController.h; path = ../View/ScienceWebViewController.h; sourceTree = "<group>"; };
+		D41E50BA1DDA0EFC00DD0B60 /* ScienceWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScienceWebViewController.m; path = ../View/ScienceWebViewController.m; sourceTree = "<group>"; };
+		D41E50BB1DDA0EFC00DD0B60 /* ScienceWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScienceWebViewController.xib; path = ../View/ScienceWebViewController.xib; sourceTree = "<group>"; };
+		D41E50BE1DDA13F700DD0B60 /* VideoWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoWebViewController.h; sourceTree = "<group>"; };
+		D41E50BF1DDA13F700DD0B60 /* VideoWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoWebViewController.m; sourceTree = "<group>"; };
 		D43762661DD2FCA1004A62E8 /* JiKeTouTiao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JiKeTouTiao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43762731DD2FCA1004A62E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D43762761DD2FCA1004A62E8 /* JiKeTouTiao.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JiKeTouTiao.xcdatamodel; sourceTree = "<group>"; };
@@ -112,6 +128,11 @@
 		D43763501DD71D13004A62E8 /* JiKeVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiKeVideoTableViewCell.h; sourceTree = "<group>"; };
 		D43763511DD71D13004A62E8 /* JiKeVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiKeVideoTableViewCell.m; sourceTree = "<group>"; };
 		D43763521DD71D13004A62E8 /* JiKeVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiKeVideoTableViewCell.xib; sourceTree = "<group>"; };
+		D437635A1DD9A188004A62E8 /* ScienceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScienceModel.h; sourceTree = "<group>"; };
+		D437635B1DD9A188004A62E8 /* ScienceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScienceModel.m; sourceTree = "<group>"; };
+		D437635D1DD9A19C004A62E8 /* ScienceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScienceTableViewCell.h; sourceTree = "<group>"; };
+		D437635E1DD9A19C004A62E8 /* ScienceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScienceTableViewCell.m; sourceTree = "<group>"; };
+		D437635F1DD9A19C004A62E8 /* ScienceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScienceTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +388,9 @@
 			children = (
 				D43762C51DD3020B004A62E8 /* ScienceViewController.h */,
 				D43762C61DD3020B004A62E8 /* ScienceViewController.m */,
+				D41E50B91DDA0EFC00DD0B60 /* ScienceWebViewController.h */,
+				D41E50BA1DDA0EFC00DD0B60 /* ScienceWebViewController.m */,
+				D41E50BB1DDA0EFC00DD0B60 /* ScienceWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -374,6 +398,8 @@
 		D43762B11DD2FFBA004A62E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D437635A1DD9A188004A62E8 /* ScienceModel.h */,
+				D437635B1DD9A188004A62E8 /* ScienceModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -381,6 +407,12 @@
 		D43762B21DD2FFBA004A62E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D437635D1DD9A19C004A62E8 /* ScienceTableViewCell.h */,
+				D437635E1DD9A19C004A62E8 /* ScienceTableViewCell.m */,
+				D437635F1DD9A19C004A62E8 /* ScienceTableViewCell.xib */,
+				D41E50281DD9C1D900DD0B60 /* ScienceImageViewTableViewCell.h */,
+				D41E50291DD9C1D900DD0B60 /* ScienceImageViewTableViewCell.m */,
+				D41E502A1DD9C1D900DD0B60 /* ScienceImageViewTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,6 +432,8 @@
 			children = (
 				D43762C81DD30235004A62E8 /* VideoViewController.h */,
 				D43762C91DD30235004A62E8 /* VideoViewController.m */,
+				D41E50BE1DDA13F700DD0B60 /* VideoWebViewController.h */,
+				D41E50BF1DDA13F700DD0B60 /* VideoWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -585,11 +619,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D43763391DD47418004A62E8 /* CrowdFundingTableViewCell.xib in Resources */,
+				D41E50BD1DDA0EFC00DD0B60 /* ScienceWebViewController.xib in Resources */,
 				D437627C1DD2FCA1004A62E8 /* LaunchScreen.storyboard in Resources */,
 				D43762791DD2FCA1004A62E8 /* Assets.xcassets in Resources */,
 				D43762741DD2FCA1004A62E8 /* Main.storyboard in Resources */,
 				D43763541DD71D13004A62E8 /* JiKeVideoTableViewCell.xib in Resources */,
+				D43763611DD9A19C004A62E8 /* ScienceTableViewCell.xib in Resources */,
 				D43762E81DD31858004A62E8 /* HomeNewsTableViewCell.xib in Resources */,
+				D41E502C1DD9C1D900DD0B60 /* ScienceImageViewTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,8 +703,11 @@
 				D43762D91DD30736004A62E8 /* TabBarViewController.m in Sources */,
 				D43762E31DD31209004A62E8 /* UIView+UIViewExtension.m in Sources */,
 				D43763381DD47418004A62E8 /* CrowdFundingTableViewCell.m in Sources */,
+				D41E50BC1DDA0EFC00DD0B60 /* ScienceWebViewController.m in Sources */,
 				D43762CD1DD30284004A62E8 /* CrowdfundingViewController.m in Sources */,
+				D43763601DD9A19C004A62E8 /* ScienceTableViewCell.m in Sources */,
 				D43762771DD2FCA1004A62E8 /* JiKeTouTiao.xcdatamodeld in Sources */,
+				D437635C1DD9A188004A62E8 /* ScienceModel.m in Sources */,
 				D43762EE1DD32C4F004A62E8 /* HomeNewsWebViewController.m in Sources */,
 				D43762E71DD31858004A62E8 /* HomeNewsTableViewCell.m in Sources */,
 				D43762C71DD3020B004A62E8 /* ScienceViewController.m in Sources */,
@@ -679,6 +719,8 @@
 				D43762D01DD302E5004A62E8 /* SettingViewController.m in Sources */,
 				D43762CA1DD30235004A62E8 /* VideoViewController.m in Sources */,
 				D437633F1DD4847F004A62E8 /* CrowdfundingNewsWebViewController.m in Sources */,
+				D41E50C01DDA13F700DD0B60 /* VideoWebViewController.m in Sources */,
+				D41E502B1DD9C1D900DD0B60 /* ScienceImageViewTableViewCell.m in Sources */,
 				D43762EB1DD31C10004A62E8 /* HomeNewsViewController.m in Sources */,
 				D43762BB1DD2FFBA004A62E8 /* AppDelegate.m in Sources */,
 				D43762C11DD30102004A62E8 /* AFNetWorkRequest.m in Sources */,
